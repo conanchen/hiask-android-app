@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/navigation_tab0"
+        icon="@drawable/ic_message_black_24dp"
+        title="@string/title_messages" />
+    <tab
+        id="@+id/navigation_tab1"
+        icon="@drawable/ic_my_location_black_24dp"
+        title="@string/title_discover" />
+    <tab
+        id="@+id/navigation_tab2"
+        icon="@drawable/ic_change"
+        title="@string/title_quickfind"
+        barColorWhenSelected="#5D4037"/>
+    <tab
+        id="@+id/navigation_tab3"
+        icon="@drawable/ic_live_help_black_24dp"
+        title="@string/title_articles" />
+   <tab
+        id="@+id/navigation_tab4"
+        icon="@drawable/ic_person_black_24dp"
+        title="@string/title_mine" />
+
+</tabs>

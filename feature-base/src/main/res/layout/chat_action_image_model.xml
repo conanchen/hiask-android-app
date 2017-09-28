@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.AppCompatImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/image"
+    android:layout_width="80dp"
+    android:layout_height="160dp"
+    app:srcCompat="@drawable/ic_notifications_black_24dp"
+    android:adjustViewBounds="true"
+    android:scaleType="fitXY"/>

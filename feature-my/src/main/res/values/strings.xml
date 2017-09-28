@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">feature-my</string>
+    <string name="title_activity_consultingprice_edit">咨询起价</string>
+    <string name="title_update_consultingdesc">修改咨询业务内容</string>
+    <string name="agree">确定</string>
+    <string name="cancel">取消</string>
+    <string name="title_update_nickname">修改昵称</string>
+    <string name="title_activity_professions_edit">职业频道</string>
+</resources>

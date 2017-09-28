@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">feature-question</string>
+    <string name="title_activity_buyanswer_edit">编辑悬赏提问</string>
+    <string name="title_activity_buyanswer_chat">解答悬赏问题</string>
+    <string name="string_save">保存</string>
+</resources>

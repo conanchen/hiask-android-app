@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.ditto.feature.quickfind">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name="org.ditto.feature.quickfind.QuickfindActivity"
+            android:label="@string/title_activity_dial"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+
+</manifest>

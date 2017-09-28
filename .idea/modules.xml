@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feature-base/feature-base.iml" filepath="$PROJECT_DIR$/feature-base/feature-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feature-buyanswer/feature-buyanswer.iml" filepath="$PROJECT_DIR$/feature-buyanswer/feature-buyanswer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feature-buyread/feature-buyread.iml" filepath="$PROJECT_DIR$/feature-buyread/feature-buyread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feature-index/feature-index.iml" filepath="$PROJECT_DIR$/feature-index/feature-index.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feature-login/feature-login.iml" filepath="$PROJECT_DIR$/feature-login/feature-login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feature-my/feature-my.iml" filepath="$PROJECT_DIR$/feature-my/feature-my.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feature-quickfind/feature-quickfind.iml" filepath="$PROJECT_DIR$/feature-quickfind/feature-quickfind.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feature-sellread/feature-sellread.iml" filepath="$PROJECT_DIR$/feature-sellread/feature-sellread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feature-test/feature-test.iml" filepath="$PROJECT_DIR$/feature-test/feature-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hiask-android-app.iml" filepath="$PROJECT_DIR$/hiask-android-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-apigrpc/lib-apigrpc.iml" filepath="$PROJECT_DIR$/lib-apigrpc/lib-apigrpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-apirest/lib-apirest.iml" filepath="$PROJECT_DIR$/lib-apirest/lib-apirest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-dbroom/lib-dbroom.iml" filepath="$PROJECT_DIR$/lib-dbroom/lib-dbroom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-repository/lib-repository.iml" filepath="$PROJECT_DIR$/lib-repository/lib-repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-usecase/lib-usecase.iml" filepath="$PROJECT_DIR$/lib-usecase/lib-usecase.iml" />
+    </modules>
+  </component>
+</project>

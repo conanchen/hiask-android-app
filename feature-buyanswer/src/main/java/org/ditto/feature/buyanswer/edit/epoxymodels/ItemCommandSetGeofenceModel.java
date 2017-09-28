@@ -1,0 +1,69 @@
+package org.ditto.feature.buyanswer.edit.epoxymodels;
+
+import android.view.View;
+import android.widget.TextView;
+
+import com.airbnb.epoxy.EpoxyAttribute;
+import com.airbnb.epoxy.EpoxyHolder;
+import com.airbnb.epoxy.EpoxyModelClass;
+import com.airbnb.epoxy.EpoxyModelWithHolder;
+
+import org.ditto.feature.buyanswer.R;
+import org.ditto.feature.buyanswer.R2;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+import static com.airbnb.epoxy.EpoxyAttribute.Option.DoNotHash;
+
+/**
+ * This model shows an example of binding to a specific view type. In this case it is a custom view
+ * we made, but it could also be another single view, like an EditText or Button.
+ */
+@EpoxyModelClass
+public abstract class ItemCommandSetGeofenceModel extends EpoxyModelWithHolder<ItemCommandSetGeofenceModel.Holder> {
+    @EpoxyAttribute
+    String centerAddress;
+    @EpoxyAttribute
+    int radius;
+
+    @EpoxyAttribute(DoNotHash)
+    View.OnClickListener clickListener;
+
+
+    @Override
+    protected int getDefaultLayout() {
+        return R.layout.buyanswer_item_command_setgeofence_model;
+    }
+
+    @Override
+    public void bind(Holder holder) {
+        holder.fenceDetail.setText(String.format("设定%s为中心方圆%d米内人员回答", centerAddress, radius));
+        holder.view.setOnClickListener(clickListener);
+    }
+
+    @Override
+    public void unbind(Holder holder) {
+        // Release resources and don't leak listeners as this view goes back to the view pool
+        holder.view.setOnClickListener(null);
+    }
+
+    public static class Holder extends EpoxyHolder {
+        @BindView(R2.id.fence_detail)
+        TextView fenceDetail;
+
+
+        View view;
+
+        @Override
+        protected void bindView(View itemView) {
+            this.view = itemView;
+            ButterKnife.bind(this, itemView);
+        }
+    }
+
+    @Override
+    public int getSpanSize(int totalSpanCount, int position, int itemCount) {
+        return 1;
+    }
+}

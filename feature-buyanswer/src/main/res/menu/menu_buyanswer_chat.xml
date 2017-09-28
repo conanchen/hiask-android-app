@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="org.ditto.hiask.MainActivity">
+
+
+    <item
+        android:id="@+id/menu_inprogress"
+        android:icon="@drawable/ic_timer_black_24dp"
+        android:orderInCategory="80"
+        android:title="问题处理中"
+        app:showAsAction="always"
+        android:visible="true"/>
+
+
+    <item
+        android:id="@+id/menu_done"
+        android:icon="@drawable/ic_check_black_24dp"
+        android:orderInCategory="80"
+        android:title="问题处理完毕"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+</menu>

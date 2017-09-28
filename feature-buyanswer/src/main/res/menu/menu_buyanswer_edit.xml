@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="org.ditto.hiask.MainActivity">
+    <!--搜索菜单-->
+    <item
+        android:id="@+id/menu_nextstep"
+        android:icon="@drawable/ic_arrow_forward_black_24dp"
+        android:orderInCategory="80"
+        android:title="下一部分问题内容"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_send"
+        android:icon="@android:drawable/ic_menu_send"
+        android:orderInCategory="80"
+        android:title="发布问题"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+
+</menu>

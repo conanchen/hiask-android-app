@@ -1,0 +1,78 @@
+package org.ditto.feature.buyanswer.create.epoxymodels;
+
+import android.view.View;
+import android.widget.TextView;
+
+import com.airbnb.epoxy.EpoxyAttribute;
+import com.airbnb.epoxy.EpoxyHolder;
+import com.airbnb.epoxy.EpoxyModelClass;
+import com.airbnb.epoxy.EpoxyModelWithHolder;
+
+import org.ditto.feature.buyanswer.R;
+import org.ditto.feature.buyanswer.R2;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+import static com.airbnb.epoxy.EpoxyAttribute.Option.DoNotHash;
+
+/**
+ * This model shows an example of binding to a specific view type. In this case it is a custom view
+ * we made, but it could also be another single view, like an EditText or Button.
+ */
+@EpoxyModelClass
+public abstract class ItemCommandCreateBuyanswerModel extends EpoxyModelWithHolder<ItemCommandCreateBuyanswerModel.ReachableHolder> {
+    @EpoxyAttribute
+    String title;
+    @EpoxyAttribute
+    String detail;
+
+
+    @EpoxyAttribute(DoNotHash)
+    View.OnClickListener clickListener;
+
+
+    @Override
+    public void bind(ItemCommandCreateBuyanswerModel.ReachableHolder holder) {
+        holder.title.setText(title);
+        holder.detail.setText(detail);
+        holder.view.setOnClickListener(clickListener);
+    }
+
+    @Override
+    public void unbind(ItemCommandCreateBuyanswerModel.ReachableHolder holder) {
+        // Release resources and don't leak listeners as this view goes back to the view pool
+        holder.view.setOnClickListener(null);
+    }
+
+
+    @Override
+    public int getSpanSize(int totalSpanCount, int position, int itemCount) {
+        // We want the header to take up all spans so it fills the screen width
+        return totalSpanCount;
+    }
+
+
+    @Override
+    protected int getDefaultLayout() {
+        return R.layout.buyanswer_item_command_create_model;
+    }
+
+
+    public static class ReachableHolder extends EpoxyHolder {
+
+        @BindView(R2.id.title)
+        TextView title;
+
+        @BindView(R2.id.detail)
+        TextView detail;
+
+        View view;
+
+        @Override
+        protected void bindView(View itemView) {
+            this.view = itemView;
+            ButterKnife.bind(this, itemView);
+        }
+    }
+}

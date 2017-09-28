@@ -1,0 +1,7 @@
+include ':app', ':feature-base', ':lib-usecase', ':lib-dbroom',
+        ':lib-apigrpc', ':lib-apirest',  ':lib-repository',
+        ':feature-login', ':feature-index',
+        ':feature-buyanswer', ':feature-my', ':feature-quickfind',
+        ':feature-test', ':feature-buyread',
+        ':feature-sellread'
+

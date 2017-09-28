@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle-3.5" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/feature-base" />
+            <option value="$PROJECT_DIR$/feature-buyanswer" />
+            <option value="$PROJECT_DIR$/feature-buyread" />
+            <option value="$PROJECT_DIR$/feature-index" />
+            <option value="$PROJECT_DIR$/feature-login" />
+            <option value="$PROJECT_DIR$/feature-my" />
+            <option value="$PROJECT_DIR$/feature-quickfind" />
+            <option value="$PROJECT_DIR$/feature-sellread" />
+            <option value="$PROJECT_DIR$/feature-test" />
+            <option value="$PROJECT_DIR$/lib-apigrpc" />
+            <option value="$PROJECT_DIR$/lib-apirest" />
+            <option value="$PROJECT_DIR$/lib-dbroom" />
+            <option value="$PROJECT_DIR$/lib-repository" />
+            <option value="$PROJECT_DIR$/lib-usecase" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

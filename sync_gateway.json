@@ -1,0 +1,35 @@
+{
+    "log":["CRUD+", "REST+", "HTTP+", "Access", "Changes+", "Attach+"],
+    "interface":":4984",
+    "adminInterface":":4985",
+    "databases": {
+        "couchbaseevents": {
+            "server":"http://10.9.42.202:8091",
+	    "bucket":"default",
+            "sync":`
+                function (doc,oldDoc) {
+                    channel ("all_docs");
+                }`,
+            "users": {
+                "GUEST": {
+                    "disabled": false,
+                    "admin_channels": ["*"]
+                }
+            }
+        },
+        "hiask": {
+            "server":"http://10.9.42.202:8091",
+	    "bucket":"hiask",
+            "sync":`
+                function (doc,oldDoc) {
+                    channel ("all_docs");
+                }`,
+            "users": {
+                "GUEST": {
+                    "disabled": false,
+                    "admin_channels": ["*"]
+                }
+            }
+        }
+    }
+}

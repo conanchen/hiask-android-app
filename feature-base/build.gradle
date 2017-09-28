@@ -1,0 +1,123 @@
+buildscript {
+    dependencies {
+        classpath "com.jakewharton:butterknife-gradle-plugin:$BUTTERKNIFE_VERSION"
+    }
+}
+apply plugin: 'com.android.library'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.jakewharton.butterknife'
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven { url 'https://maven.google.com' }
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+    }
+
+    dependencies {
+        classpath 'me.tatarka:gradle-retrolambda:3.5.0'
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+android {
+
+    publishNonDefault true
+
+    compileSdkVersion rootProject.COMPILE_SDK_VERSION
+    buildToolsVersion rootProject.ANDROID_BUILD_TOOLS_VERSION
+
+    // For retrolambda
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.1'
+    }
+    defaultConfig {
+        minSdkVersion rootProject.MIN_SDK_VERSION
+        targetSdkVersion rootProject.TARGET_SDK_VERSION
+        //multiDexEnabled true
+        versionCode 1
+        versionName "1.0"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    debugCompile project(path: ':lib-usecase', configuration: 'debug')
+    releaseCompile project(path: ':lib-usecase', configuration: 'release')
+
+
+    compile "android.arch.lifecycle:runtime:$arch_version"
+    compile "android.arch.lifecycle:extensions:$arch_version"
+    annotationProcessor "android.arch.lifecycle:compiler:$arch_version"
+
+
+    compile "com.android.support.constraint:constraint-layout:$constraint_layout_version"
+    compile "com.android.support:appcompat-v7:$ANDROID_SUPPORT_LIBS_VERSION"
+    compile "com.android.support:design:$ANDROID_SUPPORT_LIBS_VERSION"
+
+
+    compile "com.airbnb.android:epoxy:$AIRBNB_EPOXY_LIBS_VERSION"
+    compile "com.airbnb.android:lottie:$LOTTIE_VERSION"
+    annotationProcessor "com.airbnb.android:epoxy-processor:$AIRBNB_EPOXY_LIBS_VERSION"
+
+    compile "com.jakewharton:butterknife:$BUTTERKNIFE_VERSION"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$BUTTERKNIFE_VERSION"
+
+
+    compile "com.google.dagger:dagger:$dagger_version"
+    compile "com.google.dagger:dagger-android:$dagger_version"
+    compile "com.google.dagger:dagger-android-support:$dagger_version"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$dagger_version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
+
+
+    compile "com.alibaba:arouter-api:$AROUTER_API_LIBS_VERSION"
+    annotationProcessor "com.alibaba:arouter-compiler:$AROUTER_COMPILER_LIBS_VERSION"
+
+
+    //定位功能
+    compile 'com.amap.api:location:latest.integration'
+    compile 'com.amap.api:3dmap:latest.integration'
+
+    compile "com.jakewharton.timber:timber:$timber_version"
+
+    compile "io.reactivex.rxjava2:rxandroid:$RXANDROID_VERSION"
+
+    compile "com.afollestad.material-dialogs:core:$MATERIAL_DIALOGS_VERSION"
+
+    testCompile 'junit:junit:4.12'
+
+
+
+    //room database
+    compile "android.arch.persistence.room:runtime:$arch_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$arch_version"
+    compile "android.arch.persistence.room:rxjava2:$arch_version"
+    testCompile "android.arch.persistence.room:testing:$arch_version"
+
+
+}

@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="60dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/status_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_8"
+        android:src="@drawable/ic_notifications_black_24dp" />
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_overlay"
+        android:layout_toRightOf="@+id/status_indicator"
+        android:text="create buy answer article也即是悬赏问题" />
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_overlay"
+        android:layout_below="@+id/title"
+        android:layout_toRightOf="@+id/status_indicator"
+        android:text="detail description create buy answer article也即是悬赏问题类型文章的详细描述" />
+</RelativeLayout>

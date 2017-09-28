@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Feature-Login</string>
+    <string name="login_activity_name">登录关护通</string>
+    <string name="register_activity_name">快速注册</string>
+    <string name="prompt_phone">输入手机号码</string>
+    <string name="prompt_authcode">短信验证码</string>
+    <string name="action_sign_in_short">短信验证码</string>
+    <string name="prompt_password">输入新密码</string>
+    <string name="prompt_password2">再输入一次密码确认</string>
+    <string name="forgetpassword_activity_name">忘记密码</string>
+
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unsupported">不支持错误</string>
+    <string name="errcode_unknown">发送返回</string>
+    <string name="title_activity_dial">通通号呼叫</string>
+
+
+</resources>

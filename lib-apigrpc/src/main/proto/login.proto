@@ -1,0 +1,46 @@
+syntax= "proto3";
+package org.ditto.api.grpc;
+
+option java_multiple_files = true;
+option java_outer_classname = "LoginProto";
+option java_package = "org.ditto.api.grpc";
+
+service LoginService {
+    rpc Login(LoginRequest) returns (LoginResponse){};
+//    rpc LoginSync(LoginRequest) returns (SessionResponse){};
+}
+
+message LoginRequest {
+    enum LoginType {
+        QQ = 0;
+        WECHAT = 1;
+        WEIBO = 2;
+        DITTO = 3;
+    }
+
+    string clientId = 1;
+    string clientSecret = 2;
+    string accessToken = 3;
+    LoginType loginType = 4;
+}
+
+message LoginResponse {
+    string sessionId = 1;
+    string expires = 2;
+    string cookieName = 3;
+//    string accessToken = 4;
+    string tokenType = 5;
+    string refreshToken = 6;
+    string expiresIn = 7;
+    string scope = 8;
+    string uuid = 9;
+    string clientId = 10;
+
+
+}
+
+//message SessionResponse {
+//    string sessionId = 1;
+//    string expires = 2;
+//    string cookieName = 3;
+//}
