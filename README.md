@@ -84,5 +84,3 @@ conan8chan@yahoo.com/fabric$100
       2. $ sudo docker run -it --net=host -e "CONFIG_URI=https://raw.githubusercontent.com/apache/ignite/master/examples/config/example-cache.xml" apacheignite/ignite
       
       
-#附近现场、红包、服务社交消费个人端APP  ~      
-#附近现场、红包、服务社交消费商家端APP  ~      
